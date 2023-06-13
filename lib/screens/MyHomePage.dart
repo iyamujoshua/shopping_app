@@ -85,6 +85,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   
                 ),
+              ),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 25,),
+                  child: Row(
+                    children: [
+                      for ( int i=0; i<catList.length; i++)
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        padding: EdgeInsets.symmetric(
+                          vertical: 10, 
+                          horizontal: 18,
+                          ),
+                        decoration: BoxDecoration(
+                          color: catList[i]== "All" 
+                          ?Color(0xFFF7F8FA)
+                          :Color(0xFFFD725A),
+                          borderRadius: BorderRadius.circular(18)
+                        ),
+                        child: Text(catList[i]),
+                      ),
+                    ],
+                  ),
+                  ),
               )
             ],
           ),
