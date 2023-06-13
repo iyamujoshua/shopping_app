@@ -10,19 +10,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List catList = [
     "All"
-        "Best Selling"
-        "Jackets"
-        "Shirt"
-        "Pant"
+        "Best Selling",
+        "Jackets",
+        "Shirt",
+        "Pant",
         "Bag"
   ];
 
   List imgList = [
-    "Black Pant"
-        "Black T-Shirt"
-        "Cover"
-        "Ladies Bag"
-        "Warm Jacket"
+    "Black Pant",
+        "Black T-Shirt",
+        "Cover",
+        "Ladies Bag",
+        "Warm Jacket",
   ];
 
   @override
