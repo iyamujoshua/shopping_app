@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MyHomePage extends StatelessWidget {
+   MyHomePage({super.key});
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   List catList = [
-    "All"
+        "All",
         "Best Selling",
         "Jackets",
         "Shirt",
@@ -18,9 +13,8 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   List imgList = [
-    "Black Pant",
+        "Black Pant",
         "Black T-Shirt",
-        "Cover",
         "Ladies Bag",
         "Warm Jacket",
   ];
@@ -101,9 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           horizontal: 18,
                           ),
                         decoration: BoxDecoration(
-                          color: catList[i]== "All" 
-                          ?Color(0xFFF7F8FA)
-                          :Color(0xFFFD725A),
+                          color: catList[i]== "All"
+                          ?Color(0xFFFD725A)
+                          :Color(0xFFF7F8FA),
+                          
                           borderRadius: BorderRadius.circular(18)
                         ),
                         child: Text(catList[i]),
