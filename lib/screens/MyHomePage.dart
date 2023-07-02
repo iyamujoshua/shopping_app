@@ -152,6 +152,12 @@ class MyHomePage extends StatelessWidget {
               BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
         ],
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Color(0xFFFD725A),
+          onPressed: (){},
+          child: Icon(Icons.camera, color: Colors.white,),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
     );
   }
 }
