@@ -7,6 +7,20 @@ class productScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child:Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.topCenter,
+              height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 224, 224, 224),
+              ),
+            )
+          ],
+        ) ),
+    );
   }
 }
