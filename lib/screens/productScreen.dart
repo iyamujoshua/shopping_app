@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import 'bottom_sheet.dart';
+
 class productScreen extends StatelessWidget {
   // const productScreen({super.key});
   String img;
@@ -21,7 +23,8 @@ class productScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 224, 224, 224),
                   image: DecorationImage(
-                      image: AssetImage("asset/${img}.png"), fit: BoxFit.cover)),
+                      image: AssetImage("asset/${img}.png"),
+                      fit: BoxFit.cover)),
               child: Padding(
                 padding: EdgeInsets.all(20),
                 child: Row(
@@ -108,16 +111,21 @@ class productScreen extends StatelessWidget {
                   SizedBox(
                     height: 8,
                   ),
-      
+
                   ///rating bar
                   ///
-                  RatingBar.builder(unratedColor: Colors.grey, itemSize: 28, initialRating: 3.5,
-                  minRating: 1,
-                  direction: Axis.horizontal,
-                  itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                  onRatingUpdate: (rating){},
-                  itemBuilder: (context, _)=>Icon(Icons.star, color: Colors.amber,)
-                  ),
+                  RatingBar.builder(
+                      unratedColor: Colors.grey,
+                      itemSize: 28,
+                      initialRating: 3.5,
+                      minRating: 1,
+                      direction: Axis.horizontal,
+                      itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                      onRatingUpdate: (rating) {},
+                      itemBuilder: (context, _) => Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          )),
                   SizedBox(
                     height: 20,
                   ),
@@ -131,12 +139,19 @@ class productScreen extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-      
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          showModalBottomSheet(
+                              backgroundColor: Colors.transparent,
+                              context: context,
+                              builder: (context) {
+                                return customBottomSheet();
+                              });
+                        },
                         child: Container(
                           padding: EdgeInsets.all(18),
                           decoration: BoxDecoration(
@@ -149,8 +164,8 @@ class productScreen extends StatelessWidget {
                       InkWell(
                         onTap: () {},
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 18, horizontal: 70),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 18, horizontal: 70),
                           decoration: BoxDecoration(
                             color: Colors.red.withOpacity(0.7),
                             borderRadius: BorderRadius.circular(30),
